@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using RefrlectionPrikoli;
+using System.Reflection;
 
 var ass = Assembly.GetExecutingAssembly();
 
@@ -40,4 +41,49 @@ foreach (var type in types)
 }
 
 // ----------------------------------------------------------------------------
+Console.WriteLine("\n\n\n");
+
+var llkk = new Kek
+{
+    Lole = "loll",
+    MyProperty = 1,
+    LOL = new Lol
+    {
+        IsMeme = true,
+        KEK = new Kek
+        {
+            Lole = "loll2",
+            MyProperty = 2,
+            LOL = new Lol
+            {
+                IsMeme = true,
+                KEK = new Kek
+                {
+                    Lole = "loll3",
+                    MyProperty = 3,
+                    LOL = new Lol
+                    {
+                        IsMeme = true,
+                        KEK = new Kek
+                        {
+                            Lole = "loll4",
+                            MyProperty = 4,
+                            LOL = new Lol
+                            {
+                                IsMeme = true,
+                                MyProperty = 5,
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+
+var ff = typeof(Kek);
+
+var nameFF = ff.GetProperty("MyProperty");
+if (nameFF is not null)
+    Console.WriteLine(nameFF.GetValue(llkk));
 
