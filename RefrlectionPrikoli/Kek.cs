@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RefrlectionPrikoli
 {
+    [My]
     public class Kek
     {
         public int MyProperty { get; set; }

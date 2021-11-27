@@ -41,7 +41,7 @@ foreach (var type in types)
 }
 
 // ----------------------------------------------------------------------------
-Console.WriteLine("\n\n\n");
+Console.WriteLine("\n\n\n --------------------------- GET RUNTIME THINGS YEE");
 
 var llkk = new Kek
 {
@@ -87,3 +87,32 @@ var nameFF = ff.GetProperty("MyProperty");
 if (nameFF is not null)
     Console.WriteLine(nameFF.GetValue(llkk.LOL.KEK));
 
+// ----------------------------------------------------------------------------
+Console.WriteLine("\n\n\n---------------------- ATTRIBUTES");
+
+var tits = ass.GetTypes().Where(x => x.GetCustomAttributes<MyAttribute>().Count() > 0);
+
+foreach (var type in tits)
+{
+    Console.WriteLine("Name: " + type.Name);
+    Console.WriteLine("FullName: " + type.FullName);
+    Console.WriteLine("BaseType: " + type.BaseType);
+    Console.WriteLine("CustomAttrs: " + type.CustomAttributes);
+
+    var props = type.GetProperties();
+    foreach (var prop in props)
+    {
+        Console.WriteLine("\tPropname: " + prop.Name);
+        Console.WriteLine("\tProptype: " + prop.PropertyType);
+        Console.WriteLine("\tPropmodule: " + prop.Module);
+    }
+
+    var meths = type.GetMethods();
+    foreach (var meth in meths)
+    {
+        Console.WriteLine("\t\tMethname: " + meth.Name);
+        Console.WriteLine("\t\tMethtype: " + meth.ReturnType);
+        Console.WriteLine("\t\tMethmodule: " + meth.Module);
+    }
+    Console.WriteLine();
+}
