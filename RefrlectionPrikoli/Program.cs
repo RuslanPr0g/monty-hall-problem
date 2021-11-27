@@ -90,7 +90,7 @@ if (nameFF is not null)
 // ----------------------------------------------------------------------------
 Console.WriteLine("\n\n\n---------------------- ATTRIBUTES");
 
-var tits = ass.GetTypes().Where(x => x.GetCustomAttributes<MyAttribute>().Count() > 0);
+var tits = ass.GetTypes().Where(x => x.GetCustomAttributes<MyAttribute>().Any());
 
 foreach (var type in tits)
 {
