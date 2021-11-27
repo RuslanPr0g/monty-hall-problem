@@ -85,5 +85,5 @@ var ff = typeof(Kek);
 
 var nameFF = ff.GetProperty("MyProperty");
 if (nameFF is not null)
-    Console.WriteLine(nameFF.GetValue(llkk));
+    Console.WriteLine(nameFF.GetValue(llkk.LOL.KEK));
 
