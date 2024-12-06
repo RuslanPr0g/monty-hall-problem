@@ -1,7 +1,9 @@
-````markdown
 # Monty Hall Problem Simulator 🎰
 
 This project simulates the Monty Hall problem and provides an interactive chart comparing the outcomes of the "Switching" vs. "No Switching" strategies. You can adjust the number of simulations with a slider and see how the results change in real-time.
+
+![image](https://github.com/user-attachments/assets/186f39bd-2f30-4153-b3bd-df364fc996d2)
+
 
 ## 🚀 How to Run
 
@@ -17,7 +19,6 @@ This project simulates the Monty Hall problem and provides an interactive chart 
    git clone https://github.com/your-username/monty-hall-simulator.git
    cd monty-hall-simulator
    ```
-````
 
 2. Install the required Python packages:
 
@@ -60,7 +61,3 @@ After adjusting the slider, you'll see a graph showing two lines:
 ## 🤖 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-```
-
-```
